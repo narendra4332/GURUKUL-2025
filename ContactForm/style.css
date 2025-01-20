@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100vh;
+    /* background-color: lightblue; */
+    background-image: linear-gradient(to right, #ffffff, #36454F);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+    font-family: cursive;
+}
+
+h2 {
+    padding: 0px 0px 20px 0px;
+    font-weight: 900;
+}
+
+p {
+    font-size: 15px;
+    text-align: center;
+    line-height: 1.3em;
+    padding: 5px;
+    color: #eeeeeec4;
+    padding-bottom: 10px;
+}
+
+#mainContainer {
+    width: 750px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 5px 5px 10px black;
+    border-radius: 5px 5px 5px 5px;
+}
+
+#container1 {
+    background-color: #36454F;
+    color: white;
+    display: flex;
+    flex: 1;
+    height: 460px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0px 30px 0px 30px;
+    border-radius: 5px 0px 0px 5px;
+}
+
+#container1 h2 {
+    padding: 0px;
+}
+
+#container2 {
+    flex: 1;
+    height: 460px;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0px 30px 0px 30px;
+    border-radius: 0px 5px 5px 0px;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+input {
+    background-color: #eeeeee;
+    padding: 10px;
+    width: 250px;
+    border: none;
+    font-family: cursive;
+}
+
+textarea {
+    background-color: #eeeeee;
+    border: none;
+    padding: 10px;
+    width: 250px;
+}
+
+button {
+    /* background-color: #00284b; */
+    background-color: #36454F;
+    border: none;
+    border-radius: 20px;
+    color: #FFFFFF;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 12px 45px;
+    letter-spacing: 1px;
+    transition: transform 80ms ease-in;
+    cursor: pointer;
+    font-family: cursive;
+}
+
+button:hover {
+    opacity: 0.7;
+}
+
+@media only screen and (max-width: 750px) {
+    body {
+        padding: 15px;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    body {
+        padding: 0px;
+    }
+
+    #mainContainer {
+        display: inline;
+        padding: 0px;
+        box-shadow: 0px;
+    }
+
+    #container1 {
+        border-radius: 0px;
+    }
+
+    #container2 {
+        border-radius: 0px;
+    }
+}

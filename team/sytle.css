@@ -1,0 +1,236 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General body styling */
+html,
+body {
+    width: 100%;
+    overflow-x: hidden;
+    color: #333;
+    scroll-behavior: smooth;
+    background-color: #36454F;
+}
+
+#team {
+    width: 85%;
+    height: fit-content;
+    background-color: #36454F;
+    text-align: center;
+    font-family: sans-serif;
+    color: white;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 20px;
+
+}
+
+.teamHeading h2 {
+    font-size: 2.5rem;
+    color: #ffffff;
+    color: #36454F;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.teamHeading p {
+    font-size: 1.3rem;
+    color: #ffffff;
+    color: #36454F;
+    padding-top: 10px;
+    line-height: 1.8rem;
+    padding-bottom: 30px;
+}
+
+.teamCardContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    padding: 10px 40px 60px 40px;
+    background-color: whitesmoke;
+}
+
+.teamCard {
+    width: 250px;
+    height: 350px;
+    margin: 5px;
+    background-color: #36454F;
+    border-radius: 7px;
+    box-shadow: 5px 5px 5px black;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    /* smooth transition */
+}
+
+.teamCard:hover {
+    transform: translateY(-20px);
+    /* move the card upwards by 10px */
+}
+
+.teamImageBox {
+    width: 160px;
+    height: 160px;
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border-bottom-left-radius: 60%;
+    border-bottom-right-radius: 60%;
+    margin: 5px;
+    margin-bottom: 0px;
+    margin: auto;
+}
+
+.teamImageBox img {
+    border-radius: 100%;
+    width: 140px;
+    margin: auto;
+}
+
+.teamImageBox img:hover {
+    border: 3px solid white;
+}
+
+.teamImageBox1 {
+    background: linear-gradient(to right, #e0c3fc, #8ec5fc);
+}
+
+.teamTextBox p {
+    text-align: center;
+    padding: 10px;
+    color: #ffffff;
+    font-size: 1.1rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.teamTextBox h4 {
+    padding-top: 10px;
+    font-size: 1.2rem;
+}
+
+.teamButton button {
+    padding: 10px;
+    width: 150px;
+    border: none;
+    border-radius: 5px;
+    color: black;
+    cursor: pointer;
+    font-weight: bolder;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.teamButton button:hover {
+    background: linear-gradient(to right, #e0c3fc5d, #8ec5fc3a);
+    color: #ffffff;
+}
+
+/* Responsive Design for smaller screens */
+@media screen and (max-width: 768px) {
+    #team {
+        padding: 50px 20px;
+    }
+
+    .teamHeading h2 {
+        font-size: 2rem;
+        /* Adjust heading font size */
+    }
+
+    .teamHeading p {
+        font-size: 1.1rem;
+        /* Adjust paragraph font size */
+    }
+
+    .teamCardContainer {
+        gap: 30px;
+        /* Reduce gap between cards */
+        padding: 20px;
+    }
+
+    .teamCard {
+        width: 280px;
+        /* height: 400px; */
+        /* Adjust card size */
+    }
+
+    .teamImageBox {
+        height: 160px;
+        /* Adjust image box height */
+    }
+
+    .teamTextBox p {
+        font-size: 1rem;
+        /* Adjust text size for better readability */
+    }
+
+    .teamTextBox h4 {
+        font-size: 1rem;
+        /* Adjust heading size for better readability */
+    }
+
+    .teamButton button {
+        width: 130px;
+        /* Adjust button width */
+        font-size: 1rem;
+        /* Adjust button font size */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #team {
+        padding: 40px 10px;
+    }
+
+    .teamHeading h2 {
+        font-size: 1.8rem;
+        color: #36454F;
+        /* Adjust heading size for mobile */
+    }
+
+    .teamHeading p {
+        font-size: 1rem;
+        color: #36454F;
+        /* Adjust paragraph font size */
+    }
+
+    .teamCardContainer {
+        flex-direction: column;
+        /* Stack the cards vertically */
+        gap: 20px;
+        padding: 10px;
+    }
+
+    .teamCard {
+        width: 90%;
+        height: auto;
+        padding-bottom: 20px;
+        /* padding: 20px; */
+        /* Make card height auto to adjust for content */
+    }
+
+    .teamImageBox {
+        height: 160px;
+        /* Adjust image box size */
+    }
+
+    .teamTextBox p {
+        font-size: 0.9rem;
+        /* Adjust text size for small screens */
+    }
+
+    .teamTextBox h4 {
+        font-size: 1rem;
+        /* Adjust heading size for small screens */
+    }
+
+    .teamButton button {
+        width: 120px;
+        /* Adjust button size */
+        font-size: 0.9rem;
+        /* Adjust font size for button */
+    }
+}

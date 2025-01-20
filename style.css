@@ -1,0 +1,1213 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General body styling */
+html,
+body {
+    width: 100%;
+    overflow-x: hidden;
+    color: #333;
+    scroll-behavior: smooth
+}
+
+/* Style for the main container and header */
+#MainContainer {
+    width: 100%;
+    height: auto;
+}
+
+/* Fixed position for the header */
+#headerContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    padding: 10px 70px;
+    transition: background-color 0.3s ease;
+}
+
+/*headerContainer style*/
+#headerContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Add background color when scrolled */
+#headerContainer.scrolled {
+    background-color: #36454F;
+}
+
+/* headerlugo style */
+#headerlugo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#headerlugo a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: bolder;
+    text-shadow: 1px 1px 5px black;
+}
+
+#headerlugo .sits {
+    font-family: "Playwrite AU SA", serif;
+}
+
+#headerlugo .App {
+    color: #ffffff;
+    font-family: "Playwrite AU SA", serif;
+}
+
+#headerlugo .comm {
+    font-size: 14px;
+    font-weight: 100;
+    letter-spacing: 0.3em;
+    font-family: cursive;
+}
+
+/* Menu Container Style */
+#menuContainer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 500px;
+}
+
+#menuContainer a {
+    text-decoration: none;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-size: 17px;
+    font-family: sans-serif;
+}
+
+#menuContainer a:hover {
+    background-color: #ffffff4d;
+    border-radius: 8px;
+    padding: 10px;
+    transition: 0.2s;
+}
+
+/* Toggle Button Style (visible on mobile) */
+.toggle-btn {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+.toggle-btn:hover {
+    border-radius: 10px;
+    background-color: #ffffff27;
+    transition: 0.2s;
+}
+
+/* Active Menu (when toggle is clicked) */
+#menuContainer.active {
+    display: flex !important;
+    margin-top: 15px;
+}
+
+/* Responsive Design for smaller screens */
+@media screen and (max-width: 768px) {
+
+    /* Adjust header padding */
+    #headerContainer {
+        padding: 10px 30px;
+    }
+
+    /* Make the menu container full width on smaller screens */
+    #menuContainer {
+        width: 100%;
+        display: none;
+        /* Hidden by default */
+        flex-direction: column;
+        align-items: flex-start;
+        padding-top: 20px;
+    }
+
+    /* Show toggle button on small screens */
+    .toggle-btn {
+        display: block;
+    }
+
+    /* Style for menu links when the menu is active */
+    #menuContainer.active {
+        display: flex;
+    }
+
+    #menuContainer a {
+        width: 100%;
+        text-align: left;
+        padding: 15px 20px;
+        border-bottom: 1px solid #ccc;
+        font-size: 18px;
+    }
+
+    /* Optional: Add a background to the menu when active */
+    #menuContainer.active {
+        background-color: #3333335f;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        z-index: 999;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #menuContainer a {
+        font-size: 16px;
+        /* Smaller font size for very small screens */
+        padding: 12px 20px;
+    }
+
+    .toggle-btn {
+        font-size: 28px;
+        /* Slightly smaller toggle button on very small screens */
+    }
+}
+
+/* Home Section */
+#home {
+    color: black;
+    padding: 150px;
+    padding-left: 70px;
+    background: url(homePageImage.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+}
+
+.home-content {
+    width: 500px;
+}
+
+.home-content.active {
+    margin-top: 150px;
+}
+
+#home h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #ffffff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#home p {
+    font-size: 1.3rem;
+    line-height: 2rem;
+    color: #ffffff;
+    padding-bottom: 35px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.cta {
+    background-color: #2b2b2b;
+    background: linear-gradient(to right, #e0c3fc, #8ec5fc);
+    color: black;
+    padding: 12px 30px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.cta:hover {
+    background: linear-gradient(to right, #e0c3fcf1, #8ec5fc);
+    cursor: pointer;
+    filter: blur(1px);
+}
+
+/* Responsive Design for smaller screens */
+@media screen and (max-width: 768px) {
+    #home {
+        padding: 100px 20px;
+        padding-left: 20px;
+        background-attachment: scroll;
+        /* To improve performance on smaller devices */
+    }
+
+    .home-content {
+        width: 90%;
+    }
+
+    .home-content.active {
+        margin-top: 200px;
+    }
+
+    #home h1 {
+        font-size: 2.5rem;
+        /* Adjust heading size */
+    }
+
+    #home p {
+        font-size: 1.1rem;
+        /* Adjust paragraph font size */
+    }
+
+    .cta {
+        font-size: 1rem;
+        /* Adjust button font size */
+        padding: 10px 25px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #home {
+        padding: 70px 15px;
+        background-position: center;
+        /* Ensure image is centered */
+    }
+
+    .home-content {
+        width: 100%;
+        padding-top: 50px;
+        text-align: center;
+    }
+
+    #home h1 {
+        font-size: 2rem;
+        /* Adjust heading size for mobile */
+    }
+
+    #home p {
+        font-size: 1rem;
+        /* Adjust paragraph font size for mobile */
+        padding-bottom: 20px;
+    }
+
+    .cta {
+        font-size: 0.9rem;
+        padding: 8px 20px;
+        /* Adjust button size for mobile */
+    }
+}
+
+/* Card styles */
+.card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 1px 1px 10px black;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+/* about section */
+#about {
+    background-color: #36454F;
+    padding: 50px;
+    text-align: center;
+    font-family: sans-serif;
+    color: white;
+}
+
+.aboutHeading h2 {
+    font-size: 2.5rem;
+    color: #ffffff;
+    color: #36454F;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.aboutHeading p {
+    font-size: 1.3rem;
+    color: #ffffff;
+    color: #36454F;
+    padding-top: 10px;
+    line-height: 1.8rem;
+}
+
+.aboutCardContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    flex-wrap: wrap;
+    padding: 10px 20px 40px 20px;
+    background-color: whitesmoke;
+}
+
+.aboutCard {
+    width: 300px;
+    height: 480px;
+    margin: 5px;
+    background-color: #36454F;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px black;
+    cursor: pointer;
+}
+
+.aboutImageBox {
+    height: 200px;
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border-bottom-left-radius: 80%;
+    border-bottom-right-radius: 80%;
+    border-top-right-radius: 5%;
+    border-top-left-radius: 5%;
+    margin: 5px;
+    margin-bottom: 20px;
+}
+
+.abotImageBox1,
+.abotImageBox2,
+.abotImageBox3 {
+    background: linear-gradient(to right, #e0c3fc, #8ec5fc);
+}
+
+.aboutTextBox p {
+    text-align: center;
+    padding: 10px;
+    color: #ffffff;
+    font-size: 1.1rem;
+    padding-bottom: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.aboutTextBox h4 {
+    padding-top: 10px;
+    font-size: 1.2rem;
+}
+
+.aboutButton button {
+    padding: 10px;
+    width: 150px;
+    border: none;
+    border-radius: 5px;
+    color: black;
+    cursor: pointer;
+    font-weight: bolder;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.aboutButton button:hover {
+    background: linear-gradient(to right, #e0c3fc5d, #8ec5fc3a);
+}
+
+/* Responsive Design for smaller screens */
+@media screen and (max-width: 768px) {
+    #about {
+        padding: 50px 20px;
+    }
+
+    .aboutHeading h2 {
+        font-size: 2rem;
+        /* Adjust heading font size */
+    }
+
+    .aboutHeading p {
+        font-size: 1.1rem;
+        /* Adjust paragraph font size */
+    }
+
+    .aboutCardContainer {
+        gap: 30px;
+        /* Reduce gap between cards */
+        padding: 20px;
+    }
+
+    .aboutCard {
+        width: 280px;
+        height: 450px;
+        /* Adjust card size */
+    }
+
+    .aboutImageBox {
+        height: 180px;
+        /* Adjust image box height */
+    }
+
+    .aboutTextBox p {
+        font-size: 1rem;
+        /* Adjust text size for better readability */
+    }
+
+    .aboutTextBox h4 {
+        font-size: 1rem;
+        /* Adjust heading size for better readability */
+    }
+
+    .aboutButton button {
+        width: 130px;
+        /* Adjust button width */
+        font-size: 1rem;
+        /* Adjust button font size */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #about {
+        /* padding: 40px 10px; */
+    }
+
+    .aboutHeading h2 {
+        font-size: 1.8rem;
+        color: #36454F;
+        /* Adjust heading size for mobile */
+    }
+
+    .aboutHeading p {
+        font-size: 1rem;
+        color: #36454F;
+        /* Adjust paragraph font size */
+    }
+
+    .aboutCardContainer {
+        flex-direction: column;
+        /* Stack the cards vertically */
+        gap: 20px;
+        padding: 10px;
+    }
+
+    .aboutCard {
+        width: 90%;
+        height: auto;
+        padding-bottom: 20px;
+        /* Make card height auto to adjust for content */
+    }
+
+    .aboutImageBox {
+        height: 200px;
+        /* Adjust image box size */
+    }
+
+    .aboutTextBox p {
+        font-size: 0.9rem;
+        /* Adjust text size for small screens */
+    }
+
+    .aboutTextBox h4 {
+        font-size: 1rem;
+        /* Adjust heading size for small screens */
+    }
+
+    .aboutButton button {
+        width: 120px;
+        /* Adjust button size */
+        font-size: 0.9rem;
+        /* Adjust font size for button */
+    }
+}
+
+
+/* service section */
+#services {
+    background-color: #ffffff;
+    padding: 50px 50px 50px 50px;
+    text-align: center;
+    font-family: sans-serif;
+    background-color: #333;
+    color: white;
+    background-color: #343434;
+    background-color: #36454F;
+
+}
+
+.SerConHeading h2 {
+    font-size: 2.5rem;
+    padding-bottom: 20px;
+    color: #36454F;
+    padding-top: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.SerConHeading p {
+    font-size: 1.3rem;
+    color: #ffffff;
+    color: #36454F;
+    padding-top: 10px;
+    padding: 10px;
+    line-height: 1.8rem;
+}
+
+.serviceContainer {
+    background-color: whitesmoke;
+}
+
+.serCardContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    flex-wrap: wrap;
+    background-color: #f4f4f4;
+    padding: 10px 20px 40px 20px;
+    background-color: #F0F8FF;
+    background-color: whitesmoke;
+
+}
+
+.serCard {
+    width: 290px;
+    height: 410px;
+    margin: 5px;
+    background-color: white;
+    border-radius: 10px;
+    /* filter: blur(3px); */
+    box-shadow: 5px 5px 5px black;
+    cursor: pointer;
+    /* border-radius: 50px 0px; */
+    background-color: #333;
+    background-color: #36454F;
+}
+
+/* .serCard:hover {
+    filter: none;
+    transition-duration: 1.2s;
+} */
+
+.servicesimageBox {
+    height: 180px;
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    color: white;
+    border-bottom-right-radius: 80%;
+    border-top-right-radius: 5%;
+    border-top-left-radius: 5%;
+    margin: 5px;
+    margin-bottom: 20px;
+}
+
+.imageBox1,
+.imageBox2,
+.imageBox3 {
+    background: linear-gradient(to right, #ff5f6d, #ffc3a0);
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+}
+
+
+.servicestextBox h4 {
+    padding-top: 10px;
+    font-size: 1.2rem;
+}
+
+.servicestextBox p {
+    text-align: center;
+    padding: 10px;
+    color: #111111;
+    font-size: 1.1rem;
+    padding-bottom: 20px;
+    color: #ffffff;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.servicesbuttonBox button {
+    padding: 10px;
+    width: 100px;
+    border: none;
+    border-radius: 5px;
+    color: black;
+    cursor: pointer;
+    font-weight: bolder;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.servicesbuttonBox button:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    box-shadow: 1px 1px 10px black;
+    cursor: pointer;
+}
+
+/* Responsive Design for smaller screens */
+@media screen and (max-width: 768px) {
+    #services {
+        padding: 50px 20px;
+    }
+
+    .servicesHeading h2 {
+        font-size: 2rem;
+        /* Adjust heading font size */
+    }
+
+    .servicesHeading p {
+        font-size: 1.1rem;
+        /* Adjust paragraph font size */
+    }
+
+    .servicesCardContainer {
+        gap: 20px;
+        /* Reduce gap between cards */
+        padding: 20px;
+    }
+
+    .servicesCard {
+        width: 280px;
+        height: 450px;
+        /* Adjust card size */
+    }
+
+    .servicesImageBox {
+        height: 180px;
+        /* Adjust image box height */
+    }
+
+    .servicesTextBox p {
+        font-size: 1rem;
+        /* Adjust text size for better readability */
+    }
+
+    .servicesTextBox h4 {
+        font-size: 1rem;
+        /* Adjust heading size for better readability */
+    }
+
+    .servicesButton button {
+        width: 130px;
+        /* Adjust button width */
+        font-size: 1rem;
+        /* Adjust button font size */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #services {
+        /* padding: 40px 10px; */
+    }
+
+    .servicesHeading h2 {
+        font-size: 1.8rem;
+        color: #36454F;
+        /* Adjust heading size for mobile */
+    }
+
+    .servicesHeading p {
+        font-size: 1rem;
+        color: #36454F;
+        /* Adjust paragraph font size */
+    }
+
+    .servicesCardContainer {
+        flex-direction: column;
+        /* Stack the cards vertically */
+        gap: 20px;
+        padding: 10px;
+    }
+
+    .servicesCard {
+        width: 90%;
+        height: auto;
+        /* Make card height auto to adjust for content */
+    }
+
+    .servicesImageBox {
+        height: 200px;
+        /* Adjust image box size */
+    }
+
+    .servicesTextBox p {
+        font-size: 0.9rem;
+        /* Adjust text size for small screens */
+    }
+
+    .servicesTextBox h4 {
+        font-size: 1rem;
+        /* Adjust heading size for small screens */
+    }
+
+    .servicesButton button {
+        width: 120px;
+        /* Adjust button size */
+        font-size: 0.9rem;
+        /* Adjust font size for button */
+    }
+}
+
+
+/* Choose Section */
+#Choose {
+    background-color: #36454F;
+    padding: 15px 50px 50px 50px;
+    text-align: center;
+    font-family: sans-serif;
+    color: white;
+}
+
+.CooseHeading h4 {
+    color: #ffffff;
+    color: #36454F;
+    font-size: 2rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.CooseHeading p {
+    font-size: 1.3rem;
+    line-height: 1.8rem;
+    color: #ffffff;
+    padding-top: 20px;
+    padding: 20px 60px;
+    color: #36454F;
+}
+
+.CooseContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    background-color: whitesmoke;
+    padding: 20px 20px 50px 10px;
+}
+
+.choosCardContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+
+.choosCard {
+    width: 350px;
+    height: 300px;
+    background-color: #36454F;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px black;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+}
+
+.choosCard:hover {
+    background: linear-gradient(to right, #e0c3fc, #8ec5fc);
+}
+
+.choosCard p {
+    text-align: center;
+    font-size: 1.3rem;
+    padding-top: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* Responsive Design for smaller screens */
+@media screen and (max-width: 768px) {
+    #Choose {
+        padding: 15px 20px 50px 20px;
+    }
+
+    .CooseHeading h4 {
+        font-size: 1.8rem;
+        color: #36454F;
+        /* Adjust heading font size */
+    }
+
+    .CooseHeading p {
+        font-size: 1.1rem;
+        color: #36454F;
+        /* Adjust paragraph font size */
+        padding: 20px 40px;
+        /* Adjust padding */
+    }
+
+    .CooseContainer {
+        padding: 20px;
+    }
+
+    .choosCardContainer {
+        gap: 30px;
+        /* Reduce gap between cards */
+    }
+
+    .choosCard {
+        width: 300px;
+        height: 270px;
+        /* Adjust card size */
+    }
+
+    .choosCard p {
+        font-size: 1.1rem;
+        /* Adjust text size for smaller devices */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #Choose {
+        /* padding: 15px 10px 50px 10px; */
+    }
+
+    .CooseHeading h4 {
+        font-size: 1.6rem;
+        color: #36454F;
+        /* Adjust heading size for mobile */
+    }
+
+    .CooseHeading p {
+        font-size: 1rem;
+        color: #36454F;
+        /* Adjust paragraph font size */
+        padding: 15px;
+        /* Adjust padding for mobile screens */
+    }
+
+    .CooseContainer {
+        padding: 10px;
+    }
+
+    .choosCardContainer {
+        flex-direction: column;
+        /* Stack the cards vertically on small screens */
+        gap: 20px;
+    }
+
+    .choosCard {
+        width: 90%;
+        /* Make cards take full width */
+        height: auto;
+        /* Let the card height adjust based on content */
+    }
+
+    .choosCard p {
+        font-size: 1rem;
+        /* Adjust text size for small screens */
+    }
+}
+
+/* Contact Section */
+/* Contact Section */
+#contact {
+    background-color: #36454F;
+    padding: 15px 50px 50px 50px;
+    text-align: center;
+    font-family: sans-serif;
+    color: white;
+}
+
+.conatactContainer {
+    width: 100%;
+    padding: 50px 10px;
+    color: #111111;
+    color: #36454F;
+    background-color: whitesmoke;
+}
+
+#contact h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #36454F;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#contact p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    line-height: 1.8;
+    color: #36454F;
+    font-family: sans-serif;
+}
+
+/* Contact Form Section */
+form {
+    width: 80%;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+form label {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+    display: block;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    border: 1px solid gray;
+    color: black;
+    color: #36454F;
+    font-size: 1.2rem;
+    padding: 10px;
+    width: 150px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #ffffff;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    cursor: pointer;
+    border-color: #333;
+}
+
+/* Responsive Design for smaller screens */
+@media screen and (max-width: 768px) {
+    #contact {
+        padding: 15px 20px 50px 20px;
+        /* Adjust padding */
+    }
+
+    .conatactContainer {
+        padding: 20px 10px;
+        /* Adjust padding for the container */
+    }
+
+    #contact h2 {
+        font-size: 2rem;
+        /* Adjust heading font size */
+    }
+
+    #contact p {
+        font-size: 1.1rem;
+        /* Adjust paragraph font size */
+    }
+
+    form {
+        width: 90%;
+        /* Adjust form width for smaller screens */
+        padding: 10px;
+    }
+
+    form input,
+    form textarea {
+        padding: 10px;
+        /* Adjust input padding for mobile */
+    }
+
+    form button {
+        width: 100%;
+        /* Make button full width on small screens */
+        padding: 12px;
+        font-size: 1.1rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #contact {
+        padding: 15px 10px 50px 10px;
+        /* Adjust padding for mobile screens */
+    }
+
+    .conatactContainer {
+        padding: 10px;
+        /* Adjust container padding */
+    }
+
+    #contact h2 {
+        font-size: 1.8rem;
+        /* Smaller heading size on mobile */
+    }
+
+    #contact p {
+        font-size: 1rem;
+        /* Smaller paragraph font size */
+        padding: 10px;
+        /* Adjust padding for mobile */
+    }
+
+    form {
+        width: 100%;
+        /* Make form take full width on mobile */
+        padding: 10px;
+    }
+
+    form input,
+    form textarea {
+        padding: 10px;
+        /* Adjust padding for mobile */
+    }
+
+    form button {
+        width: 100%;
+        /* Button takes full width */
+        font-size: 1rem;
+        /* Adjust button text size */
+    }
+}
+
+/* footer styling */
+#footerContainer {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #333;
+    background-color: #36454F;
+}
+
+#firstContainer {
+    padding-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 15px;
+}
+
+#firstContainer hr {
+    width: 500px;
+    border-color: #ffffff93;
+}
+
+#secondContainer {
+    width: 100%;
+    padding-top: 40px;
+    color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    color: #ffffff;
+}
+
+.secondContainerBox {
+    width: 200px;
+}
+
+.secondContainerBox .footerHeading {
+    color: #111111;
+    padding-bottom: 30px;
+    color: #ffffff;
+}
+
+.secondContainerBox .footerPara {
+    color: #111111;
+    color: #ffffff;
+    padding-bottom: 15px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footerPara:hover {
+    color: blue;
+    transform: translateX(5px);
+}
+
+/* Style for "OUR RESULT" Section */
+.secondContainerBox {
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.footerHeading {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #333;
+    color: #ffffff;
+}
+
+/* Styling for the list of links */
+.footer-links {
+    list-style-type: none;
+    padding: 0;
+}
+
+/* Styling individual links */
+.footer-link {
+    color: #333;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    display: block;
+    margin: 10px 0;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover effect for the links */
+.footer-link:hover {
+    color: blue;
+    transform: translateX(5px);
+}
+
+#thirdContainer {
+    width: 85%;
+    border-top: 1px solid #11111176;
+    /* color: #ffffff; */
+    border-top: 1px solid #ffffff76;
+}
+
+#thirdContainer {
+    text-align: center;
+    padding: 28px 0px 12px 20px;
+}
+
+#thirdContainer .footerPara {
+    color: #ffffff;
+
+}
+
+@media (max-width: 768px) {
+    #secondContainer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .secondContainerBox {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    #firstContainer {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        margin-bottom: 20px;
+    }
+
+    #firstContainer a img {
+        width: 25px;
+    }
+}
+
+/* Media Query for screens smaller than 480px (phones) */
+@media (max-width: 480px) {
+    #footerContainer {
+        padding: 10px;
+    }
+
+    .footerHeading {
+        font-size: 16px;
+    }
+
+    .footerPara {
+        font-size: 12px;
+    }
+
+    #firstContainer a img {
+        width: 20px;
+    }
+}
