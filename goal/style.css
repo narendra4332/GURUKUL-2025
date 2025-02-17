@@ -15,7 +15,7 @@ body {
     background-color: #36454F;
 }
 
-#team {
+#goal {
     width: 85%;
     height: fit-content;
     background-color: #36454F;
@@ -28,14 +28,14 @@ body {
 
 }
 
-.teamHeading h2 {
+.goalHeading h2 {
     font-size: 2.5rem;
     color: #ffffff;
     color: #36454F;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.teamHeading p {
+.goalHeading p {
     font-size: 1.3rem;
     color: #ffffff;
     color: #36454F;
@@ -44,23 +44,29 @@ body {
     padding-bottom: 30px;
 }
 
-.teamContainer {
+.goalContainer {
     background-color: #ffffff;
+    padding: 20px;
 }
 
-.teamCardContainer {
+.goalCardContainer {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: 20px;
     flex-wrap: wrap;
-    padding: 10px 40px 30px 40px;
 }
 
-.teamCard {
-    width: 250px;
-    height: 350px;
-    margin: 5px;
+.goalCard {
+    width: 350px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+    padding: 20px;
     background-color: #36454F;
     border-radius: 7px;
     box-shadow: 5px 5px 5px black;
@@ -69,13 +75,13 @@ body {
     /* smooth transition */
 }
 
-.teamCard:hover {
-    transform: translateY(-20px);
+.goalCard:hover {
+    transform: translateX(10px);
     /* move the card upwards by 10px */
 }
 
 .back-Buttoon button {
-    padding: 10px 25px;
+    padding: 12px 25px;
     font-size: 1rem;
     background: linear-gradient(to right, #e0c3fcf1, #8ec5fc);
     border: none;
@@ -83,7 +89,7 @@ body {
     color: white;
     cursor: pointer;
     color: black;
-    margin-bottom: 30px;
+    margin: 30px 0px;
     font-weight: bolder;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -92,49 +98,7 @@ body {
     background: linear-gradient(to right, #e0c3fc69, #8ec5fc5c);
 }
 
-.teamImageBox {
-    width: 160px;
-    height: 160px;
-    font-size: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    border-bottom-left-radius: 60%;
-    border-bottom-right-radius: 60%;
-    margin: 5px;
-    margin-bottom: 0px;
-    margin: auto;
-}
-
-.teamImageBox img {
-    border-radius: 100%;
-    width: 140px;
-    margin: auto;
-}
-
-.teamImageBox img:hover {
-    border: 3px solid white;
-}
-
-.teamImageBox1 {
-    background: linear-gradient(to right, #e0c3fc, #8ec5fc);
-}
-
-.teamTextBox p {
-    text-align: center;
-    padding: 10px;
-    color: #ffffff;
-    font-size: 1.1rem;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-
-.teamTextBox h4 {
-    padding-top: 10px;
-    font-size: 1.2rem;
-}
-
-.teamButton button {
+.goalButton button {
     padding: 10px;
     width: 150px;
     border: none;
@@ -145,55 +109,40 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.teamButton button:hover {
+.goalButton button:hover {
     background: linear-gradient(to right, #e0c3fc5d, #8ec5fc3a);
-    color: #ffffff;
 }
 
 /* Responsive Design for smaller screens */
 @media screen and (max-width: 768px) {
-    #team {
+    #goal {
+        width: 90%;
         padding: 50px 20px;
     }
 
-    .teamHeading h2 {
+    .goalHeading h2 {
         font-size: 2rem;
         /* Adjust heading font size */
     }
 
-    .teamHeading p {
+    .goalHeading p {
         font-size: 1.1rem;
         /* Adjust paragraph font size */
     }
 
-    .teamCardContainer {
+    .goalCardContainer {
         gap: 30px;
         /* Reduce gap between cards */
         padding: 20px;
     }
 
-    .teamCard {
+    .goalCard {
         width: 280px;
         /* height: 400px; */
         /* Adjust card size */
     }
 
-    .teamImageBox {
-        height: 160px;
-        /* Adjust image box height */
-    }
-
-    .teamTextBox p {
-        font-size: 1rem;
-        /* Adjust text size for better readability */
-    }
-
-    .teamTextBox h4 {
-        font-size: 1rem;
-        /* Adjust heading size for better readability */
-    }
-
-    .teamButton button {
+    .goalButton button {
         width: 130px;
         /* Adjust button width */
         font-size: 1rem;
@@ -202,30 +151,30 @@ body {
 }
 
 @media screen and (max-width: 480px) {
-    #team {
+    #goal {
         padding: 40px 10px;
     }
 
-    .teamHeading h2 {
+    .goalHeading h2 {
         font-size: 1.8rem;
         color: #36454F;
         /* Adjust heading size for mobile */
     }
 
-    .teamHeading p {
+    .goalHeading p {
         font-size: 1rem;
         color: #36454F;
         /* Adjust paragraph font size */
     }
 
-    .teamCardContainer {
+    .goalCardContainer {
         flex-direction: column;
         /* Stack the cards vertically */
         gap: 20px;
         padding: 10px;
     }
 
-    .teamCard {
+    .goalCard {
         width: 90%;
         height: auto;
         padding-bottom: 20px;
@@ -233,22 +182,22 @@ body {
         /* Make card height auto to adjust for content */
     }
 
-    .teamImageBox {
+    .goalImageBox {
         height: 160px;
         /* Adjust image box size */
     }
 
-    .teamTextBox p {
+    .goalTextBox p {
         font-size: 0.9rem;
         /* Adjust text size for small screens */
     }
 
-    .teamTextBox h4 {
+    .goalTextBox h4 {
         font-size: 1rem;
         /* Adjust heading size for small screens */
     }
 
-    .teamButton button {
+    .goalButton button {
         width: 120px;
         /* Adjust button size */
         font-size: 0.9rem;

@@ -11,22 +11,31 @@
 
 <body>
     <div id="mainContainer">
-        <div id="container1">
-            <h2>Let's Chat</h2>
-            <p>Whether you have a question,want to start a project or simply want to contact.</p>
-            <p>Feel free to send me a message in the contact form.</p>
+        <div id="mainContainer1">
+            <div id="container1">
+                <h2>Let's Chat</h2>
+                <p>Whether you have a question,want to start a project or simply want to contact.</p>
+                <p>Feel free to send me a message in the contact form.</p>
+            </div>
+            <div id="container2">
+                <h2>Contact</h2>
+                <form action="#" id="formBox">
+                    <input type="text" placeholder="Name*" name="name" required>
+                    <input type="email" placeholder="Email*" name="email" required>
+                    <input type="text" placeholder="Company" name="Company" required>
+                    <input type="tel" id="phone" name="phone" placeholder="123-456-7890" maxlength="10"
+                        pattern="[0-9]{10,15}" required>
+                    <div class="textareaBox">
+                        <textarea placeholder=" message" name="message" rows="3"></textarea>
+                    </div>
+                    <div>
+                        <button>SUBMIT</button>
+                    </div>
+                </form>
+            </div>
         </div>
-        <div id="container2">
-            <h2>Contact</h2>
-            <form action="#">
-                <input type="text" placeholder="Name*" name="name" required>
-                <input type="email" placeholder="Email*" name="email" required>
-                <input type="text" placeholder="Company" name="Company" required>
-                <input type="tel" id="phone" name="phone" placeholder="123-456-7890" maxlength="10"
-                    pattern="[0-9]{10,15}" required>
-                <textarea placeholder=" message" name="message" rows="3"></textarea>
-                <button>SUBMIT</button>
-            </form>
+        <div class="back-Buttoon">
+            <button class="abotImageBox1" onclick="window.history.back()">Go Back</button>
         </div>
     </div>
 </body>
